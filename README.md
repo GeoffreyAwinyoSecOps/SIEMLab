@@ -3,14 +3,33 @@
  ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
 
 <h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
+This project demonstrates how to build a lightweight Security Information and Event Management (SIEM) lab in Microsoft Azure using just a single Windows VM. Instead of installing third-party logging agents, this lab leverages built-in Windows Security Event logs collected via the Azure Monitoring Agent (AMA). These logs are ingested into Log Analytics and monitored using Microsoft Sentinel.
+
+The goal is to simulate basic SOC operations such as:
+
+- Collecting and analyzing native security events
+
+- Creating detection rules using Kusto Query Language (KQL)
+
+- Investigating alerts
+
+- Visualizing attacker IP origins on a world map to demonstrate geolocation-based analysis
+
+By focusing on default logs and a minimal Azure footprint, this lab is ideal for beginners, students, and professionals looking to learn SIEM fundamentals without complex endpoint configurations like Sysmon.
+
+
 <br />
 
 
-<h2>Languages and Utilities Used</h2>
+<h2>Tools and Services Used</h2>
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>Microsoft Azure</b> 
+- <b>Windows 10 VM</b>
+- <b>Azure Monitoring Agent (AMA)</b>
+- <b>Log Analytics Workspace</b>
+- <b>Microsoft Sentinel</b>
+- <b>KQL (Kusto Query Language)</b>
+- <b>Geolocation with IP-to-country mapping</b>
 
 <h2>Environments Used </h2>
 
