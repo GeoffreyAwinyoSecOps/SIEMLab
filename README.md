@@ -31,7 +31,7 @@ By focusing on default logs and a minimal Azure footprint, this lab is ideal for
 - <b>KQL (Kusto Query Language)</b>
 - <b>Geolocation with IP-to-country mapping</b>
 
-<h2>Program walk-through:</h2>
+<h2>Lab walk-through:</h2>
 
 <p align="center">
 Launch the utility: <br/>
