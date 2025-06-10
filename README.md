@@ -34,8 +34,7 @@ By focusing on default logs and a minimal Azure footprint, this lab is ideal for
 <div align="center">
 
 <h2>Lab Walk-through:<br><br>
- 
-Part I: Lab Setup</h2><br>
+ Part I: Lab Setup</h2>
 <h3>Overview of Azure Security Operations Center</h3>
 
 <img src="https://i.imgur.com/9icHPhr.png" height="80%" width="80%"/>
