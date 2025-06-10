@@ -31,11 +31,35 @@ By focusing on default logs and a minimal Azure footprint, this lab is ideal for
 - <b>KQL (Kusto Query Language)</b>
 - <b>Geolocation with IP-to-country mapping</b>
 
-<h2>Lab walk-through:</h2>
+<div align="center">
+
+<h2>Lab Walk-through:<br><br>
+ 
+Part I: Lab Setup</h2><br>
+
+<h3>Overview of Azure Security Operations Center</h3>
+
+<img src="https://i.imgur.com/9icHPhr.png" height="80%" width="80%"/>
+
+</div>
+STEP 1: Microsoft Azure Subscription<br>
+1.	Begin with an Azure subscription (free or paid): https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account<br>
+2.	Once subscribed, sign in here:  https://portal.azure.com<br><br>
+
+STEP 2: Create a Resource Group<br>
+1.	From the search bar on the home page of portal.azure.com, search for ‘resource groups’ and hit Enter.<br>
+2.	In ‘Resource groups’ select ‘+ Create’ to create a new resource group.<br>
+3.	Select Azure subscription from a list.<br>
+4.	Enter the name of your resource group, mine is ‘SIEMLab’.<br>
+5.	If satisfied with information entered in the fields, select ‘Review + Create’ and finally ‘+ Create’ to complete the process.<br><br>
+
+
+
+
 
 <p align="center">
 Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 <br />
 <br />
 Select the disk:  <br/>
