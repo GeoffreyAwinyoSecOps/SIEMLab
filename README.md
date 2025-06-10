@@ -36,12 +36,12 @@ By focusing on default logs and a minimal Azure footprint, this lab is ideal for
 <h2>Lab Walk-through:<br><br>
  
 Part I: Lab Setup</h2><br>
-
 <h3>Overview of Azure Security Operations Center</h3>
 
 <img src="https://i.imgur.com/9icHPhr.png" height="80%" width="80%"/>
 
 </div>
+
 STEP 1: Microsoft Azure Subscription<br>
 1.	Begin with an Azure subscription (free or paid): https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account<br>
 2.	Once subscribed, sign in here:  https://portal.azure.com<br><br>
