@@ -54,8 +54,18 @@ STEP 2: Create a Resource Group<br>
 5.	If satisfied with information entered in the fields, select ‘Review + Create’ and finally ‘+ Create’ to complete the process.<br><br>
 
 <div align="center">
+ 
 <img src="https://i.imgur.com/IBdDUEm.png" height="80%" width="80%"/>
+
 </div>
+<br><br>
+
+STEP 3: Create a Virtual Network
+1.	Once Step 2 is complete, from the search bar, search for ‘virtual networks’ and hit Enter.
+2.	Select ‘+ Create’ in the proceeding page.
+3.	In the ‘Basics’ tab, select ‘Subscription’, ‘Resource Group’, and ‘Region’. II am using the subscription and resource group created in the preceding steps. The name of my virtual network is       SIEMLabVM-vnet.
+4.	Default settings are fine for the rest of the tabs. Select ‘Review + Create’ and finally ‘+ Create’ to complete the process. 
+
 
 
 <p align="center">
