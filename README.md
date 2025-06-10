@@ -53,8 +53,9 @@ STEP 2: Create a Resource Group<br>
 4.	Enter the name of your resource group, mine is ‘SIEMLab’.<br>
 5.	If satisfied with information entered in the fields, select ‘Review + Create’ and finally ‘+ Create’ to complete the process.<br><br>
 
-
-
+<div align="center">
+<img src="https://i.imgur.com/IBdDUEm.png" height="80%" width="80%"/>
+</div>
 
 
 <p align="center">
