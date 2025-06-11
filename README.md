@@ -37,7 +37,15 @@ By focusing on default logs and a minimal Azure footprint, this lab is ideal for
  Part I: Lab Setup</h2>
 <h3>Overview of Azure Security Operations Center</h3>
 
-<img src="https://i.imgur.com/9icHPhr.png" height="80%" width="80%"/>
+<table align="center" style="border: 5px solid #000; box-shadow: 5px 5px 5px #888;">
+  <tr>
+    <td>
+      <img src="https://i.imgur.com/9icHPhr.png" width="80%" alt="Framed Image"/>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
 
 </div>
 
@@ -53,10 +61,17 @@ STEP 2: Create a Resource Group<br>
 5.	If satisfied with information entered in the fields, select ‘Review + Create’ and finally ‘+ Create’ to complete the process.<br><br>
 
 <div align="center">
- 
-<img src="https://i.imgur.com/IBdDUEm.png" height="60%" width="60%"/>
+
+<table style="border: 5px solid #000; box-shadow: 5px 5px 5px #888;">
+  <tr>
+    <td>
+      <img src="https://i.imgur.com/IBdDUEm.png" width="60%" alt="Framed Image"/>
+    </td>
+  </tr>
+</table>
 
 </div>
+
 <br><br>
 
 STEP 3: Create a Virtual Network
@@ -66,10 +81,17 @@ STEP 3: Create a Virtual Network
 4.	Default settings are fine for the rest of the tabs. Select ‘Review + Create’ and finally ‘+ Create’ to complete the process.<br><br> 
 
 <div align="center">
- 
-<img src="https://i.imgur.com/NfYM65k.png" height="60%" width="60%"/>
+
+<table style="border: 5px solid #000; box-shadow: 5px 5px 5px #888;">
+  <tr>
+    <td>
+      <img src="https://i.imgur.com/NfYM65k.png" width="60%" alt="Framed Image"/>
+    </td>
+  </tr>
+</table>
 
 </div>
+
 <br><br>
 
 STEP 4: Create A Network Security Group
