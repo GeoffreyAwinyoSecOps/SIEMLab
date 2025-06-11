@@ -356,17 +356,15 @@ NOTE: This step links the Log Analytics Workspace to the SIEM.<br>
 </table>
 
 </div>
-
-
-
 <br>
 <br>
-
-<strong>STEP 9: Create a Map Using Log Data</strong>
-1.	Download the spreadsheet from here: https://drive.google.com/file/d/13EfjM_4BohrmaxqXZLB5VUBIz2sv9Siz/view.
-2.	Back in Azure portal, search for and select ‘microsoft sentinel’.
-3.	Select the Log Analytics Workspace previously created > select ‘Configuration’ > select ‘Watchlist’ > select ‘New’ > enter ‘Name’ (I used ‘GeoIP’) > Alias (can be same as name) > select ‘Next’ and browse for location of downloaded file from above > select ‘Network’ for ‘Searchkey’ > select ‘Review + Create’
-4.	From the Log Analytics Workspace within Microsoft Sentinel, navigate to ‘Threat Management’ and select ‘Workbooks’ > select ‘Add’ > select ‘Edit’ and clear all content > copy JSON file from here: https://drive.google.com/file/d/1ErlVEK5cQjpGyOcu4T02xYy7F31dWuir/view > select ‘+’ query and paste the JSON.<br><br>
+<strong>STEP 9: Create a Map Using Log Data</strong><br><br>
+1.	Download the spreadsheet from here: https://drive.google.com/file/d/13EfjM_4BohrmaxqXZLB5VUBIz2sv9Siz/view.<br>
+2.	Back in Azure portal, search for and select ‘microsoft sentinel’.<br>
+3.	Select the Log Analytics Workspace previously created > select ‘Configuration’ > select ‘Watchlist’ > select ‘New’ > enter ‘Name’ (I used ‘GeoIP’) > Alias (can be same as name) > 
+   select ‘Next’ and browse for location of downloaded file from above > select ‘Network’ for ‘Searchkey’ > select ‘Review + Create’<br>
+4.	From the Log Analytics Workspace within Microsoft Sentinel, navigate to ‘Threat Management’ and select ‘Workbooks’ > select ‘Add’ > select ‘Edit’ and clear all 
+   content > copy JSON file from here: https://drive.google.com/file/d/1ErlVEK5cQjpGyOcu4T02xYy7F31dWuir/view > select ‘+’ query and paste the JSON.<br><br>
 
 
 <div align="center">
