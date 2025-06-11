@@ -334,11 +334,13 @@ Select ‘Filter Current Log’ on the left-hand side of the window and enter ev
       <img src="https://i.imgur.com/BMZXFfn.png" width="80%" alt="Image 2"/>
     </td>
   </tr>
- 
+</table>
+<br>
+<br>
 <div align="center">
 <h3>Viewing Logs in Log Analytics Workspace</h3>
 </div>
-
+<br>
 <div align="left">
 1. Search for ‘log analytics workspace’ from the search bar at the top of the Azure portal page and select the top result.<br>
 2. Select ‘Logs’ and close pop-up windows that appear.<br>
@@ -356,13 +358,16 @@ Select ‘Filter Current Log’ on the left-hand side of the window and enter ev
 <br>
 </div>
 <br>
-<strong>STEP 9: Create a Map Using Log Data</strong><br><br>
-1.	Download the spreadsheet from here: https://drive.google.com/file/d/13EfjM_4BohrmaxqXZLB5VUBIz2sv9Siz/view.<br>
-2.	Back in Azure portal, search for and select ‘microsoft sentinel’.<br>
-3.	Select the Log Analytics Workspace previously created > select ‘Configuration’ > select ‘Watchlist’ > select ‘New’ > enter ‘Name’ (I used ‘GeoIP’) > Alias (can be same as name) > 
-   select ‘Next’ and browse for location of downloaded file from above > select ‘Network’ for ‘Searchkey’ > select ‘Review + Create’<br>
-4.	From the Log Analytics Workspace within Microsoft Sentinel, navigate to ‘Threat Management’ and select ‘Workbooks’ > select ‘Add’ > select ‘Edit’ and clear all 
-   content > copy JSON file from here: https://drive.google.com/file/d/1ErlVEK5cQjpGyOcu4T02xYy7F31dWuir/view > select ‘+’ query and paste the JSON.<br><br>
+<div align="left">
+  <strong>STEP 9: Create a Map Using Log Data</strong><br><br>
+
+  1. Download the spreadsheet from here:<br>
+  https://drive.google.com/file/d/13EfjM_4BohrmaxqXZLB5VUBIz2sv9Siz/view<br>
+  2. Back in Azure portal, search for and select ‘Microsoft Sentinel’.<br>
+  3. Select the Log Analytics Workspace previously created > select ‘Configuration’ > select ‘Watchlist’ > select ‘New’ > enter a ‘Name’ (e.g., ‘GeoIP’) > set Alias (can be the same as the name) > select ‘Next’ and browse for the downloaded file > for ‘Searchkey’, select ‘Network’ > select ‘Review + Create’.<br>
+  4. In Microsoft Sentinel, under the same Log Analytics Workspace, navigate to ‘Threat Management’ > select ‘Workbooks’ > click ‘Add’ > select ‘Edit’ and clear all content > copy JSON file from here:<br>
+  https://drive.google.com/file/d/1ErlVEK5cQjpGyOcu4T02xYy7F31dWuir/view > click ‘+’ query and paste the JSON.<br>
+</div>
 
 
 <div align="center">
