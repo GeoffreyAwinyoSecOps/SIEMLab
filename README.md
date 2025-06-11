@@ -98,7 +98,7 @@ By focusing on default logs and a minimal Azure footprint, this lab is ideal for
 3.	Make the appropriate selections for subscription, resource group, and region. Select ‘Review + Create’ and then ‘+ Create’.
 4.	Once created, open the NSG and edit ‘Inbound security rules’ to allow any protocol from any source as shown below.     
 
-NOTE: The Network Security Group acts as a firewall in the cloud environment. The goal here is to make it easier for attackers to find us for the sake of the lab.<br><br>
+<strong>NOTE:</strong> The Network Security Group acts as a firewall in the cloud environment. The goal here is to make it easier for attackers to find us for the sake of the lab.<br><br>
 
 <div align="center">
 
@@ -121,6 +121,8 @@ NOTE: The Network Security Group acts as a firewall in the cloud environment. Th
 </table>
 
 </div>
+<br>
+<br>
 
 
 <strong>STEP 5: Create a Virtual Machine</strong>
@@ -176,7 +178,7 @@ NOTE: The Network Security Group acts as a firewall in the cloud environment. Th
 </div>
 
 
-NOTE: Once the VM is created, log in to it via RDP using its public email address provided in the Azure portal. Once logged in, type ‘wf.msc’ and hit enter in the search bar in the taskbar > select ‘Windows Defender Firewall’ and cycle through the tabs – ‘domain’, ‘private’, and ‘public’ ensure that the status in each is set to ‘off’. This will ensure that the VM is reachable.
+<strong>NOTE:</strong> Once the VM is created, log in to it via RDP using its public email address provided in the Azure portal. Once logged in, type ‘wf.msc’ and hit enter in the search bar in the taskbar > select ‘Windows Defender Firewall’ and cycle through the tabs – ‘domain’, ‘private’, and ‘public’ ensure that the status in each is set to ‘off’. This will ensure that the VM is reachable.
 
 <div align="center">
 
@@ -279,7 +281,7 @@ Select ‘Filter Current Log’ on the left-hand side of the window and enter ev
 1.	Type ‘microsoft sentinel’ in the search bar at the top of the Azure portal page and select the top result.<br>
 2.	On the next page, select ‘+ Create’ and select the Log Analytics Workspace from the preceding steps and select ‘Add’.<br>
 
-NOTE: This step links the Log Analytics Workspace to the SIEM.<br>
+<Strong>NOTE:</strong> This step links the Log Analytics Workspace to the SIEM.<br><br>
 
 <div align="center">
 
@@ -340,21 +342,15 @@ NOTE: This step links the Log Analytics Workspace to the SIEM.<br>
 2. Select ‘Logs’ and close pop-up windows that appear.<br>
 3. Enter queries such as ‘SecurityEvent’ for example and select ‘Run’. View the resulting logs.<br>
 </div>
-
-
-<br>
-<br>
-
-<div align="center">
-
-<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+<table align="center" style="border: 5px solid #000; box-shadow: 5px 5px 5px #888;">
   <tr>
-    <td style="padding: 0;">
+    <td>
       <img src="https://i.imgur.com/0MgGrTM.png" width="80%" alt="Framed Image"/>
     </td>
   </tr>
 </table>
-
+<br>
+<br>
 </div>
 <br>
 <br>
