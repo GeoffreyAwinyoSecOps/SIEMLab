@@ -411,9 +411,9 @@ Select ‘Filter Current Log’ on the left-hand side of the window and enter ev
 </table>
 
 </div>
-
 <br>
 <br>
+If you made it to this point, congratulations, you are done! You may experiment with more advanced queries and/or try your hand at vulnerability management. Special thanks goes to Josh Madakor - www.youtube.com/@JoshMadakor. The idea for this project and resources like the JSON query and GeoIP file came from Josh Madakor, thank you, sir!
 
 
 
