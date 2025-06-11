@@ -340,7 +340,9 @@ Select ‘Filter Current Log’ on the left-hand side of the window and enter ev
 <div align="left">
 1. Search for ‘log analytics workspace’ from the search bar at the top of the Azure portal page and select the top result.<br>
 2. Select ‘Logs’ and close pop-up windows that appear.<br>
-3. Enter queries such as ‘SecurityEvent’ for example and select ‘Run’. View the resulting logs.<br>
+3. Enter queries such as ‘SecurityEvent’ for example and select ‘Run’. View the resulting logs.<br><br>
+
+ 
 </div>
 <table align="center" style="border: 5px solid #000; box-shadow: 5px 5px 5px #888;">
   <tr>
@@ -352,7 +354,6 @@ Select ‘Filter Current Log’ on the left-hand side of the window and enter ev
 <br>
 <br>
 </div>
-<br>
 <br>
 <strong>STEP 9: Create a Map Using Log Data</strong><br><br>
 1.	Download the spreadsheet from here: https://drive.google.com/file/d/13EfjM_4BohrmaxqXZLB5VUBIz2sv9Siz/view.<br>
