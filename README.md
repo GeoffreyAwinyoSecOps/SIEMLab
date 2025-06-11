@@ -160,6 +160,128 @@ Select ‘Filter Current Log’ on the left-hand side of the window and enter ev
 <img src="https://i.imgur.com/fYvBMcS.png" height="80%" width="80%"/>
 
 </div>
+<br>
+<br>
+
+STEP 6: Create a Log Repository in Azure
+1.	Type ‘log analytics workspace’ in the search bar at the top of the Azure portal page and select the top result.
+2.	On the next page, select ‘+ Create’ and ensure subscription, resource group, and region are the same as in the preceding steps.
+3.	Select ‘Review + Create’ and then ‘+ Create’.<br><br>
+
+<div align="center">
+ 
+<img src="https://i.imgur.com/vPDq8HS.png" height="80%" width="80%"/>
+
+<br>
+<br>
+
+<img src="https://i.imgur.com/ou0Fn25.png" height="60%" width="60%"/>
+
+</div>
+<br>
+<br>
+
+STEP 7: Create a SIEM (Security Information and Event Management) Solution<br>
+1.	Type ‘microsoft sentinel’ in the search bar at the top of the Azure portal page and select the top result.<br>
+2.	On the next page, select ‘+ Create’ and select the Log Analytics Workspace from the preceding steps and select ‘Add’.<br>
+
+NOTE: This step links the Log Analytics Workspace to the SIEM.<br>
+
+<div align="center">
+ 
+<img src="https://i.imgur.com/ABEeppG.png" height="80%" width="80%"/>
+
+<br>
+<br>
+
+<img src="https://i.imgur.com/UKS9sQ4.png" height="80%" width="80%"/>
+
+</div>
+
+<br>
+<br>
+
+STEP 8: Establish a Connection Between Log Analytics Workspace and the Virtual Machine
+1.	Type ‘microsoft sentinel’ in the search bar at the top of the Azure portal page and select the top result.<br>
+2.	On the next page, select the Log Analytics Workspace previously created. Within the workspace, navigate to ‘Content Management’ > ‘Content Hub’. Within the Content Hub, search for ‘windows security events’, select it and select ‘Install’.<br>
+3.	Once Windows Security Events is installed, select ‘Manage’ > select ‘Windows Security Events via AMA’ > select ‘Open Connector Page’ > select ‘+ Create a Data Collection Rule’. NOTE: this is used by the VM to forward logs into the Logs Analytics Workspace.<br>
+4.	Enter a name for the Data Collection Rule, select the appropriate subscription, resource group and select ‘Next’.<br>
+5.	Under ‘Resources’, expand all and select the target VM. Select ‘All Events’ and select ‘Review + Create’.<br><br>
+
+
+<div align="center">
+ 
+<img src="https://i.imgur.com/RjmbcsA.png" height="80%" width="80%"/>
+
+<br>
+<br>
+
+<img src="https://i.imgur.com/BMZXFfn.png" height="80%" width="80%"/>
+
+</div>
+<br>
+<br>
+<div align="center">
+
+<h3>Viewing Logs in Log Analytics Workspace</h3>
+
+
+</div>
+
+1.	Search for ‘log analytics workspace’ from the search bar at the top of the Azure portal page and select the top result. 
+2.	Select ‘Logs’ and close pop-up windows that appear.
+3.	Enter queries such as ‘SecurityEvent’ for example and select ‘Run’. View the resulting logs.
+
+
+<br>
+<br>
+<div align="center">
+ 
+<img src="https://i.imgur.com/0MgGrTM.png" height="80%" width="80%"/>
+
+
+</div>
+
+<br>
+<br>
+
+STEP 9: Create a Map Using Log Data
+1.	Download the spreadsheet from here: https://drive.google.com/file/d/13EfjM_4BohrmaxqXZLB5VUBIz2sv9Siz/view.
+2.	Back in Azure portal, search for and select ‘microsoft sentinel’.
+3.	Select the Log Analytics Workspace previously created > select ‘Configuration’ > select ‘Watchlist’ > select ‘New’ > enter ‘Name’ (I used ‘GeoIP’) > Alias (can be same as name) > select ‘Next’ and browse for location of downloaded file from above > select ‘Network’ for ‘Searchkey’ > select ‘Review + Create’
+4.	From the Log Analytics Workspace within Microsoft Sentinel, navigate to ‘Threat Management’ and select ‘Workbooks’ > select ‘Add’ > select ‘Edit’ and clear all content > copy JSON file from here: https://drive.google.com/file/d/1ErlVEK5cQjpGyOcu4T02xYy7F31dWuir/view > select ‘+’ query and paste the JSON.<br><br>
+
+
+<div align="center">
+ 
+<img src="https://i.imgur.com/zRxLAU2.png" height="80%" width="80%"/>
+
+<br>
+<br>
+
+<img src="https://i.imgur.com/N997OCK.png" height="80%" width="80%"/>
+
+<br>
+<br>
+
+<img src="https://i.imgur.com/N997OCK.png" height="80%" width="80%"/>
+
+<br>
+<br>
+
+<img src="https://i.imgur.com/AcZFlBP.png" height="80%" width="80%"/>
+
+<br>
+<br>
+
+<img src="https://i.imgur.com/OB0z9Xr.png" height="80%" width="80%"/>
+
+
+
+</div>
+
+<br>
+<br>
 
 
 
@@ -184,41 +306,3 @@ Select ‘Filter Current Log’ on the left-hand side of the window and enter ev
 
 
 
-<p align="center">
-Launch the utility: <br/>
-
-<br />
-<br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
