@@ -1,7 +1,5 @@
 <h1>Configure a SIEM in Azure</h1>
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
-
 <h2>Description</h2>
 This project demonstrates how to build a lightweight Security Information and Event Management (SIEM) lab in Microsoft Azure using just a single Windows VM. Instead of installing third-party logging agents, this lab leverages built-in Windows Security Event logs collected via the Azure Monitoring Agent (AMA). These logs are ingested into Log Analytics and monitored using Microsoft Sentinel.
 
@@ -49,11 +47,11 @@ By focusing on default logs and a minimal Azure footprint, this lab is ideal for
 
 </div>
 
-STEP 1: Microsoft Azure Subscription<br>
+<strong>STEP 1: Microsoft Azure Subscription</strong><br>
 1.	Begin with an Azure subscription (free or paid): https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account<br>
 2.	Once subscribed, sign in here:  https://portal.azure.com<br><br>
 
-STEP 2: Create a Resource Group<br>
+<strong>STEP 2: Create a Resource Group</strong><br>
 1.	From the search bar on the home page of portal.azure.com, search for ‘resource groups’ and hit Enter.<br>
 2.	In ‘Resource groups’ select ‘+ Create’ to create a new resource group.<br>
 3.	Select Azure subscription from a list.<br>
@@ -74,7 +72,7 @@ STEP 2: Create a Resource Group<br>
 
 <br><br>
 
-STEP 3: Create a Virtual Network
+<strong>STEP 3: Create a Virtual Network</strong>
 1.	Once Step 2 is complete, from the search bar, search for ‘virtual networks’ and hit Enter.
 2.	Select ‘+ Create’ in the proceeding page.
 3.	In the ‘Basics’ tab, select ‘Subscription’, ‘Resource Group’, and ‘Region’. I am using the subscription and resource group created in the preceding steps. The name of my virtual network is       SIEMLabVM-vnet.
@@ -94,7 +92,7 @@ STEP 3: Create a Virtual Network
 
 <br><br>
 
-STEP 4: Create A Network Security Group
+<strong>STEP 4: Create A Network Security Group</strong>
 1.	From the search bar at the top of the page, search for ‘network security groups’ and select ‘network security groups’ from the list.
 2.	Select ‘+ Create’ in the proceeding page.
 3.	Make the appropriate selections for subscription, resource group, and region. Select ‘Review + Create’ and then ‘+ Create’.
@@ -103,16 +101,29 @@ STEP 4: Create A Network Security Group
 NOTE: The Network Security Group acts as a firewall in the cloud environment. The goal here is to make it easier for attackers to find us for the sake of the lab.<br><br>
 
 <div align="center">
- 
-<img src="https://i.imgur.com/lao0atq.png" height="80%" width="80%"/>
-<br>
-<br>
-<img src="https://i.imgur.com/A1OntQM.png" height="80%" width="80%"/>
 
-</div>
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888;">
+  <tr>
+    <td>
+      <img src="https://i.imgur.com/lao0atq.png" width="80%" alt="First Framed Image"/>
+    </td>
+  </tr>
+</table>
+
 <br><br>
 
-STEP 5: Create a Virtual Machine
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888;">
+  <tr>
+    <td>
+      <img src="https://i.imgur.com/A1OntQM.png" width="80%" alt="Second Framed Image"/>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+
+<strong>STEP 5: Create a Virtual Machine</strong>
 1.	From the search bar at the top of the page, search for ‘virtual machines’, hit enter and select ‘virtual machines.’
 2.	Select ‘+ Create’ in the proceeding page.
 3.	In the ‘Basics’ tab, select subscription, resource group, and region. Select an Windows 10 image.
@@ -126,34 +137,61 @@ STEP 5: Create a Virtual Machine
 11.	Under ‘Advanced’ and ‘Tags’, defaults are fine. Select ‘Review + create’ and then ‘+ Create’ to complete creating a VM.<br><br>
 
 <div align="center">
- 
-<img src="https://i.imgur.com/d2W3eLg.png" height="80%" width="80%"/>
-<br>
-<br>
-<img src="https://i.imgur.com/PDvTfyl.png" height="80%" width="80%"/>
-<br>
-<br>
-<img src="https://i.imgur.com/BbV5QiS.png" height="80%" width="80%"/>
-<br>
-<br>
-<img src="https://i.imgur.com/lNYIi9z.png" height="80%" width="80%"/>
-<br>
-<br>
-<img src="https://i.imgur.com/Vut1BW9.png" height="80%" width="80%"/>
-<br>
-<br>
+
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888;">
+  <tr><td>
+    <img src="https://i.imgur.com/d2W3eLg.png" width="80%" alt="Image 1"/>
+  </td></tr>
+</table>
+<br><br>
+
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888;">
+  <tr><td>
+    <img src="https://i.imgur.com/PDvTfyl.png" width="80%" alt="Image 2"/>
+  </td></tr>
+</table>
+<br><br>
+
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888;">
+  <tr><td>
+    <img src="https://i.imgur.com/BbV5QiS.png" width="80%" alt="Image 3"/>
+  </td></tr>
+</table>
+<br><br>
+
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888;">
+  <tr><td>
+    <img src="https://i.imgur.com/lNYIi9z.png" width="80%" alt="Image 4"/>
+  </td></tr>
+</table>
+<br><br>
+
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888;">
+  <tr><td>
+    <img src="https://i.imgur.com/Vut1BW9.png" width="80%" alt="Image 5"/>
+  </td></tr>
+</table>
+<br><br>
 
 </div>
-<br><br>
+
 
 NOTE: Once the VM is created, log in to it via RDP using its public email address provided in the Azure portal. Once logged in, type ‘wf.msc’ and hit enter in the search bar in the taskbar > select ‘Windows Defender Firewall’ and cycle through the tabs – ‘domain’, ‘private’, and ‘public’ ensure that the status in each is set to ‘off’. This will ensure that the VM is reachable.
 
 <div align="center">
- 
-<img src="https://i.imgur.com/Jex1AWP.png" height="60%" width="60%"/>
+
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888;">
+  <tr>
+    <td>
+      <img src="https://i.imgur.com/Jex1AWP.png" width="60%" alt="Framed Image"/>
+    </td>
+  </tr>
+</table>
 
 </div>
+
 <br><br>
+
 <div align="center">
 
 <h2>Part II: Log Collection<br><br>
@@ -165,65 +203,110 @@ Virtual Machine Logs</h2>
 Windows Event Logs can be accessed on the VM by searching for and launching Event Viewer > 'Windows Logs' > 'Security' as shown below:<br><br>
 
 <div align="center">
- 
-<img src="https://i.imgur.com/hU8buGx.png" height="60%" width="60%"/>
+
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/hU8buGx.png" width="60%" alt="Framed Image"/>
+    </td>
+  </tr>
+</table>
 
 </div>
+
+
 <br>
 <br>
 Select ‘Filter Current Log’ on the left-hand side of the window and enter event ID 4625 – Failed log in attempts should yield one of my 3 purposely failed log in attempts by ‘fakeuser3’ as shown below:
 <br>
 <br>
 <div align="center">
- 
-<img src="https://i.imgur.com/IqTIgJr.png" height="80%" width="80%"/>
-<br>
-<br>
-<img src="https://i.imgur.com/fYvBMcS.png" height="80%" width="80%"/>
+
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/IqTIgJr.png" width="80%" alt="Framed Image 1"/>
+    </td>
+  </tr>
+</table>
+
+<br><br>
+
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/fYvBMcS.png" width="80%" alt="Framed Image 2"/>
+    </td>
+  </tr>
+</table>
 
 </div>
+
 <br>
 <br>
 
-STEP 6: Create a Log Repository in Azure
+<strong>STEP 6: Create a Log Repository in Azure</strong>
 1.	Type ‘log analytics workspace’ in the search bar at the top of the Azure portal page and select the top result.
 2.	On the next page, select ‘+ Create’ and ensure subscription, resource group, and region are the same as in the preceding steps.
 3.	Select ‘Review + Create’ and then ‘+ Create’.<br><br>
 
 <div align="center">
- 
-<img src="https://i.imgur.com/vPDq8HS.png" height="80%" width="80%"/>
 
-<br>
-<br>
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/vPDq8HS.png" width="80%" alt="Image 1"/>
+    </td>
+  </tr>
+</table>
 
-<img src="https://i.imgur.com/ou0Fn25.png" height="60%" width="60%"/>
+<br><br>
+
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/ou0Fn25.png" width="60%" alt="Image 2"/>
+    </td>
+  </tr>
+</table>
 
 </div>
+
 <br>
 <br>
 
-STEP 7: Create a SIEM (Security Information and Event Management) Solution<br>
+<strong>STEP 7: Create a SIEM (Security Information and Event Management) Solution</strong><br>
 1.	Type ‘microsoft sentinel’ in the search bar at the top of the Azure portal page and select the top result.<br>
 2.	On the next page, select ‘+ Create’ and select the Log Analytics Workspace from the preceding steps and select ‘Add’.<br>
 
 NOTE: This step links the Log Analytics Workspace to the SIEM.<br>
 
 <div align="center">
- 
-<img src="https://i.imgur.com/ABEeppG.png" height="80%" width="80%"/>
 
-<br>
-<br>
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/ABEeppG.png" width="80%" alt="Image 1"/>
+    </td>
+  </tr>
+</table>
 
-<img src="https://i.imgur.com/UKS9sQ4.png" height="80%" width="80%"/>
+<br><br>
+
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/UKS9sQ4.png" width="80%" alt="Image 2"/>
+    </td>
+  </tr>
+</table>
 
 </div>
 
 <br>
 <br>
 
-STEP 8: Establish a Connection Between Log Analytics Workspace and the Virtual Machine
+<strong>STEP 8: Establish a Connection Between Log Analytics Workspace and the Virtual Machine</strong>
 1.	Type ‘microsoft sentinel’ in the search bar at the top of the Azure portal page and select the top result.<br>
 2.	On the next page, select the Log Analytics Workspace previously created. Within the workspace, navigate to ‘Content Management’ > ‘Content Hub’. Within the Content Hub, search for ‘windows security events’, select it and select ‘Install’.<br>
 3.	Once Windows Security Events is installed, select ‘Manage’ > select ‘Windows Security Events via AMA’ > select ‘Open Connector Page’ > select ‘+ Create a Data Collection Rule’. NOTE: this is used by the VM to forward logs into the Logs Analytics Workspace.<br>
@@ -232,15 +315,24 @@ STEP 8: Establish a Connection Between Log Analytics Workspace and the Virtual M
 
 
 <div align="center">
- 
-<img src="https://i.imgur.com/RjmbcsA.png" height="80%" width="80%"/>
 
-<br>
-<br>
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/RjmbcsA.png" width="80%" alt="Image 1"/>
+    </td>
+  </tr>
+</table>
 
-<img src="https://i.imgur.com/BMZXFfn.png" height="80%" width="80%"/>
+<br><br>
 
-</div>
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/BMZXFfn.png" width="80%" alt="Image 2"/>
+    </td>
+  </tr>
+
 <br>
 <br>
 <div align="center">
@@ -258,16 +350,22 @@ STEP 8: Establish a Connection Between Log Analytics Workspace and the Virtual M
 <br>
 <br>
 <div align="center">
- 
-<img src="https://i.imgur.com/0MgGrTM.png" height="80%" width="80%"/>
 
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/0MgGrTM.png" width="80%" alt="Framed Image"/>
+    </td>
+  </tr>
+</table>
 
 </div>
 
+
 <br>
 <br>
 
-STEP 9: Create a Map Using Log Data
+<strong>STEP 9: Create a Map Using Log Data</strong>
 1.	Download the spreadsheet from here: https://drive.google.com/file/d/13EfjM_4BohrmaxqXZLB5VUBIz2sv9Siz/view.
 2.	Back in Azure portal, search for and select ‘microsoft sentinel’.
 3.	Select the Log Analytics Workspace previously created > select ‘Configuration’ > select ‘Watchlist’ > select ‘New’ > enter ‘Name’ (I used ‘GeoIP’) > Alias (can be same as name) > select ‘Next’ and browse for location of downloaded file from above > select ‘Network’ for ‘Searchkey’ > select ‘Review + Create’
@@ -275,30 +373,44 @@ STEP 9: Create a Map Using Log Data
 
 
 <div align="center">
- 
-<img src="https://i.imgur.com/zRxLAU2.png" height="80%" width="80%"/>
 
-<br>
-<br>
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/zRxLAU2.png" width="80%" alt="Image 1"/>
+    </td>
+  </tr>
+</table>
 
-<img src="https://i.imgur.com/N997OCK.png" height="80%" width="80%"/>
+<br><br>
 
-<br>
-<br>
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/N997OCK.png" width="80%" alt="Image 2"/>
+    </td>
+  </tr>
+</table>
 
-<img src="https://i.imgur.com/N997OCK.png" height="80%" width="80%"/>
+<br><br>
 
-<br>
-<br>
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/AcZFlBP.png" width="80%" alt="Image 4"/>
+    </td>
+  </tr>
+</table>
 
-<img src="https://i.imgur.com/AcZFlBP.png" height="80%" width="80%"/>
+<br><br>
 
-<br>
-<br>
-
-<img src="https://i.imgur.com/OB0z9Xr.png" height="80%" width="80%"/>
-
-
+<table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding: 0;">
+      <img src="https://i.imgur.com/OB0z9Xr.png" width="80%" alt="Image 5"/>
+    </td>
+  </tr>
+</table>
 
 </div>
 
