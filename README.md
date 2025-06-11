@@ -358,6 +358,7 @@ NOTE: This step links the Log Analytics Workspace to the SIEM.<br>
 </div>
 
 
+
 <br>
 <br>
 
