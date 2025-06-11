@@ -332,23 +332,19 @@ NOTE: This step links the Log Analytics Workspace to the SIEM.<br>
       <img src="https://i.imgur.com/BMZXFfn.png" width="80%" alt="Image 2"/>
     </td>
   </tr>
-
-<br>
-<br>
 <div align="center">
-
 <h3>Viewing Logs in Log Analytics Workspace</h3>
-
-
+</div>
+<div align="left">
+1. Search for ‘log analytics workspace’ from the search bar at the top of the Azure portal page and select the top result.<br>
+2. Select ‘Logs’ and close pop-up windows that appear.<br>
+3. Enter queries such as ‘SecurityEvent’ for example and select ‘Run’. View the resulting logs.<br>
 </div>
 
-1.	Search for ‘log analytics workspace’ from the search bar at the top of the Azure portal page and select the top result. 
-2.	Select ‘Logs’ and close pop-up windows that appear.
-3.	Enter queries such as ‘SecurityEvent’ for example and select ‘Run’. View the resulting logs.
-
 
 <br>
 <br>
+
 <div align="center">
 
 <table style="border: 2px solid #000; box-shadow: 2px 2px 5px #888; border-collapse: collapse;" cellspacing="0" cellpadding="0">
